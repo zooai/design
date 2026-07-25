@@ -33,12 +33,15 @@ literal.** Do that and your surface is already 90% on-brand.
   1:1, because they speak the same names.
 - **Dark by construction.** Surfaces mount dark. Light is a `.light` override for
   the few brand and docs pages that need it.
-- **Opacity is the palette.** One neutral ladder plus an opacity ladder is the
-  entire non-semantic color system. Rank reads as opacity. This is why Zoo
-  looks like Zoo and not like a theme.
+- **Color is the palette.** The six brand colors — yellow, magenta, cyan, green,
+  red, blue — carry equal weight against a near-black ground. A neutral ramp
+  handles text rank; the color is never muted to gray. This is why Zoo looks
+  like Zoo and not like a theme.
 - **The parts are self-contained.** Components carry their own inline styles, so
   one drops into Next, Vite, Tamagui, or nothing and renders identically.
 
 ## The one rule that overrides the rest
 
-When a decision is unclear, return to the atom. the six colors, loud on near-blacktype. If the work reinforces it, keep the work. If it doesn't, change the work.
+When a decision is unclear, return to the atom: the six colors, loud and equal,
+on a near-black ground. If the work reinforces it, keep the work. If it doesn't,
+change the work.
