@@ -41,5 +41,4 @@ literal.** Do that and your surface is already 90% on-brand.
 
 ## The one rule that overrides the rest
 
-When a decision is unclear, return to the atom. Monochrome, true black, white
-type. If the work reinforces it, keep the work. If it doesn't, change the work.
+When a decision is unclear, return to the atom. the six colors, loud on near-blacktype. If the work reinforces it, keep the work. If it doesn't, change the work.
