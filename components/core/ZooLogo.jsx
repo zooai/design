@@ -1,6 +1,6 @@
 import React from 'react'
 
-/** The Zoo mark (assets/logo.svg), monochrome — never re-hued. */
+/** The Zoo mark (assets/logo.svg), six-color — never re-hued. */
 export function ZooLogo({ size = 22, variant = 'white', title = 'Zoo', style, ...rest }) {
   const fill = variant === 'white' ? '#ffffff' : variant === 'black' ? 'var(--zoo-black)' : 'currentColor'
   return (

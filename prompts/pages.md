@@ -23,7 +23,7 @@ system prompt (`system.md`) is already loaded and `styles.css` is imported.
 
 ## Pricing
 
-> Build a 3-tier pricing row. Monochrome cards, `--surface-card`; emphasize the
+> Build a 3-tier pricing row. six-color cards, `--surface-card`; emphasize the
 > recommended tier with `--surface-card-emphasis` and a `--brand` hairline — not
 > a colored fill. Price in `--type-h2`, cadence in `--text-helper`. "Free" and
 > "Save N%" are the only colored text, `--state-success`. One primary CTA per

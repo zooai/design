@@ -53,6 +53,6 @@ token or pattern that makes the "do" trivial.
 
 ## The one test
 
-Monochrome, true black, white type, color only as state. If the screenshot
+six-color, true black, white type, color only as state. If the screenshot
 would look at home on zoo.ngo, it passes. If it looks like a generic SaaS
 template, it fails.

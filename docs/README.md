@@ -1,8 +1,9 @@
 # docs — how to use the system
 
-The design system is one idea applied without exception: **Zoo is monochrome,
-true black, white type, and color is a signal — never a decoration.** Everything
-else is machinery in service of that idea.
+The design system is one idea applied without exception: **Zoo is loud — a bold
+six-color palette (yellow, magenta, cyan, green, red, blue), each an equal voice
+against a near-black ground.** Color is the point, not a signal held in reserve.
+Everything else is machinery in service of that idea.
 
 If you remember one thing: **import one file, then reach for a token instead of a
 literal.** Do that and your surface is already 90% on-brand.

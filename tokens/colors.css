@@ -1,10 +1,20 @@
-/* Zoo is monochrome. One hue rendered through an opacity ladder.
-   Base ladder = Tailwind neutral (tailwind.config.ts). Semantic names match
+/* Zoo is LOUD. A bold six-color palette — yellow, magenta, cyan, green, red,
+   blue — each accent an equal voice, set against a near-black surface. This is
+   the opposite of a monochrome brand: color is the point. Semantic names match
    zoo.ngo's CSS variables exactly, so code copies over 1:1.
    DARK IS THE DEFAULT THEME (zoo.ngo mounts ThemeProvider defaultTheme="dark"). */
 
 :root{
-  /* ——— base neutral ladder ——— */
+  /* ——— the six brand colors (brand.json — the source of truth) ——— */
+  --zoo-yellow:#FCF006;   /* primary — sunlight */
+  --zoo-magenta:#EA018E;
+  --zoo-cyan:#01ACF1;
+  --zoo-green:#00A652;
+  --zoo-red:#ED1C24;
+  --zoo-blue:#2E3192;
+
+  /* ——— base neutral ladder (surfaces + text, the quiet ground the color
+         sits on — near-black, not pure black) ——— */
   --neutral-50:#FAFAFA;
   --neutral-100:#F5F5F5;
   --neutral-200:#E5E5E5;
@@ -22,7 +32,7 @@
   --zoo-black:#0A0A0B;
   --zoo-white:#FFFFFF;
 
-  /* ——— the opacity ladder: the real palette ——— */
+  /* ——— white opacity ladder (hairlines, glass surfaces on the dark ground) ——— */
   --white-05:rgb(255 255 255 / .05);
   --white-10:rgb(255 255 255 / .10);
   --white-15:rgb(255 255 255 / .15);
@@ -32,39 +42,44 @@
   --white-60:rgb(255 255 255 / .60);
   --white-80:rgb(255 255 255 / .80);
 
+  /* ——— accent voices (equal weight; brand.json accent1/2/3) ——— */
+  --accent-1:var(--zoo-magenta);
+  --accent-2:var(--zoo-cyan);
+  --accent-3:var(--zoo-yellow);
+
   /* ——— semantic aliases (dark, the default) ——— */
-  --background:#000000;
+  --background:#0A0A0B;               /* near-black ground */
   --foreground:#ededed;
-  --card:#0a0a0a;
+  --card:#141416;
   --card-foreground:#f5f5f5;
-  --popover:#0a0a0a;
+  --popover:#141416;
   --popover-foreground:#f5f5f5;
-  --primary:#ffffff;
-  --primary-foreground:#000000;
-  --secondary:#1a1a1a;
+  --primary:var(--zoo-yellow);        /* the primary accent IS a color, loudly */
+  --primary-foreground:#0A0A0B;       /* dark type on the bright yellow */
+  --secondary:#1c1c1f;
   --secondary-foreground:#f5f5f5;
-  --muted:#101010;
-  --muted-foreground:#888888;
-  --accent:#1a1a1a;
-  --accent-foreground:#f5f5f5;
-  --destructive:#666666;
-  --destructive-foreground:#f5f5f5;
-  --border:#1f1f1f;
-  --input:#1f1f1f;
-  --ring:#333333;
-  --brand:#e4e4e7;
-  --brand-foreground:#09090b;
+  --muted:#141416;
+  --muted-foreground:#8a8a8f;
+  --accent:var(--zoo-magenta);        /* hover / active lift — a color, not gray */
+  --accent-foreground:#ffffff;
+  --destructive:var(--zoo-red);
+  --destructive-foreground:#ffffff;
+  --border:#232327;
+  --input:#232327;
+  --ring:var(--zoo-magenta);          /* focus ring is brand, not neutral */
+  --brand:var(--zoo-yellow);
+  --brand-foreground:#0A0A0B;
   --brand-muted:#a3a3a3;
-  --black:#000000;
+  --black:#0A0A0B;
   --white:#f5f5f5;
 
-  /* ——— surface recipes (card fills used across zoo.ngo) ——— */
+  /* ——— surface recipes (card fills across zoo.ngo) ——— */
   --surface-page:var(--background);
-  --surface-card:rgb(23 23 23 / .5);        /* bg-neutral-900/50 — grid tiles */
-  --surface-card-emphasis:rgb(23 23 23 / .8);/* bg-neutral-900/80 — featured   */
-  --surface-card-quiet:rgb(23 23 23 / .4);   /* bg-neutral-900/40 — story cards */
-  --surface-overlay:rgb(10 10 10 / .95);     /* dropdown / popover panels       */
-  --surface-header:rgb(0 0 0 / .7);          /* fixed nav, with backdrop blur   */
+  --surface-card:rgb(23 23 26 / .5);
+  --surface-card-emphasis:rgb(23 23 26 / .8);
+  --surface-card-quiet:rgb(23 23 26 / .4);
+  --surface-overlay:rgb(10 10 11 / .95);
+  --surface-header:rgb(10 10 11 / .7);
   --border-hairline:var(--neutral-800);
   --border-card:var(--white-10);
   --border-strong:var(--neutral-700);
@@ -76,50 +91,52 @@
   --text-helper:var(--muted-foreground);
   --text-disabled:var(--white-30);
 
-  /* ——— the ONLY permitted hues (DESIGN.md §2.4) ——— */
-  --state-error:#ef4444;        /* red-500  — destructive / blocking error   */
-  --state-error-text:#fca5a5;   /* red-300                                    */
-  --state-error-bg:rgb(239 68 68 / .1);
-  --state-online:#4ade80;       /* green-400 — live status dot                */
-  --state-success:#22c55e;      /* green-500 — "Free" / "Save N%" callouts    */
-  --chrome-dot-red:rgb(239 68 68 / .6);
-  --chrome-dot-yellow:rgb(234 179 8 / .6);
-  --chrome-dot-green:rgb(34 197 94 / .6);
+  /* ——— state (brand.json semantic — Zoo's own green/yellow/red) ——— */
+  --state-error:var(--zoo-red);
+  --state-error-text:#f8a0a4;
+  --state-error-bg:rgb(237 28 36 / .12);
+  --state-online:var(--zoo-green);
+  --state-success:var(--zoo-green);
+  --state-warning:var(--zoo-yellow);
+  --chrome-dot-red:rgb(237 28 36 / .7);
+  --chrome-dot-yellow:rgb(252 240 6 / .7);
+  --chrome-dot-green:rgb(0 166 82 / .7);
 }
 
-/* Light theme — the same tokens, inverted. Rare: only /brand-style docs pages. */
+/* Light theme — the same tokens on a white ground; the six colors keep their
+   value (they read on white too). Rare: only /brand-style docs pages. */
 .light{
-  --background:#ffffff;
-  --foreground:#0a0a0a;
-  --card:#f5f5f5;
-  --card-foreground:#0a0a0a;
-  --popover:#ffffff;
-  --popover-foreground:#0a0a0a;
-  --primary:#0a0a0a;
-  --primary-foreground:#ffffff;
-  --secondary:#f5f5f5;
-  --secondary-foreground:#0a0a0a;
-  --muted:#f5f5f5;
+  --background:#FFFFFF;
+  --foreground:#0A0A0B;
+  --card:#FAFAFA;
+  --card-foreground:#0A0A0B;
+  --popover:#FFFFFF;
+  --popover-foreground:#0A0A0B;
+  --primary:var(--zoo-yellow);
+  --primary-foreground:#0A0A0B;
+  --secondary:#F5F5F5;
+  --secondary-foreground:#0A0A0B;
+  --muted:#F5F5F5;
   --muted-foreground:#525252;
-  --accent:#f5f5f5;
-  --accent-foreground:#0a0a0a;
-  --destructive:#999999;
-  --destructive-foreground:#ffffff;
-  --border:#e5e5e5;
-  --input:#e5e5e5;
-  --ring:#d4d4d4;
-  --black:#0a0a0a;
-  --white:#ffffff;
-  --surface-card:#f5f5f5;
-  --surface-card-emphasis:#ffffff;
-  --surface-card-quiet:#fafafa;
+  --accent:var(--zoo-magenta);
+  --accent-foreground:#FFFFFF;
+  --destructive:var(--zoo-red);
+  --destructive-foreground:#FFFFFF;
+  --border:#E5E5E5;
+  --input:#E5E5E5;
+  --ring:var(--zoo-magenta);
+  --black:#0A0A0B;
+  --white:#FFFFFF;
+  --surface-card:#F5F5F5;
+  --surface-card-emphasis:#FFFFFF;
+  --surface-card-quiet:#FAFAFA;
   --surface-overlay:rgb(255 255 255 / .95);
   --surface-header:rgb(255 255 255 / .8);
   --border-hairline:var(--neutral-200);
   --border-card:rgb(0 0 0 / .1);
   --border-strong:var(--neutral-300);
   --text-primary:var(--neutral-950);
-  --text-secondary:rgb(10 10 10 / .8);
-  --text-tertiary:rgb(10 10 10 / .6);
-  --text-disabled:rgb(10 10 10 / .3);
+  --text-secondary:rgb(10 10 11 / .8);
+  --text-tertiary:rgb(10 10 11 / .6);
+  --text-disabled:rgb(10 10 11 / .3);
 }

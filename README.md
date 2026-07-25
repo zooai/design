@@ -2,7 +2,7 @@
 
 # Zoo Design System
 
-**Monochrome. Dark by default. One hue rendered through an opacity ladder.**
+**six-color. Dark by default. One hue rendered through an opacity ladder.**
 
 The single source of truth for how every Zoo surface looks — tokens, components, brand assets, and the guidelines that hold them together.
 
@@ -32,7 +32,7 @@ import { ZooLogo } from "@zooai/design/components/core/ZooLogo.jsx";
 | Path | What |
 |------|------|
 | `styles.css` | The one entry point — imports every token file below. |
-| `tokens/` | The palette. `colors` (monochrome opacity ladder, dark-default), `typography`, `spacing`, `radius`, `elevation`, `motion`, `z`, `fonts`, `base`. |
+| `tokens/` | The palette. `colors` (bold six-color palette, dark-default), `typography`, `spacing`, `radius`, `elevation`, `motion`, `z`, `fonts`, `base`. |
 | `components/` | `core` (Button, Card, Badge, Icon, ZooLogo, Avatar, ChromeText…), `forms`, `overlays`, `navigation` — each as `.jsx` + `.d.ts` + a `.prompt.md` usage guide. |
 | `prompts/` | System-level generation guidance — the "make it look Zoo" system prompt, do/don't rules, page prompts. |
 | `content/` | The words — brand voice and taglines. |
@@ -43,7 +43,7 @@ import { ZooLogo } from "@zooai/design/components/core/ZooLogo.jsx";
 
 ## Principles
 
-- **Monochrome by construction** — one neutral ladder plus an opacity ladder is the entire palette. Color appears only as genuine semantics (live/error/warning).
+- **Loud by design** — a bold six-color palette (yellow, magenta, cyan, green, red, blue), each accent an equal voice against a near-black ground. Color is the point, not the exception.
 - **Dark is the default theme** — surfaces mount dark-first; light is the override.
 - **Self-contained components** — inline styles, no CSS-framework coupling, so a component drops into any host (Next, Vite, Tamagui, none) and renders identically.
 - **Every component ships its own `.prompt.md`** — a one-screen usage guide for humans and AI alike.

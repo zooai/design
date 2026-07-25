@@ -1,4 +1,4 @@
-/** Thin monochrome meter — white fill on a neutral-800 track. */
+/** Thin six-color meter — white fill on a neutral-800 track. */
 export interface ProgressProps extends React.HTMLAttributes<HTMLDivElement> {
   value?: number;
   max?: number;

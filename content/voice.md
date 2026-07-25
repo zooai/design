@@ -12,7 +12,7 @@ who market it.
 2. **Say the thing, then stop.** Lead with the claim. Cut the throat-clearing
    ("We're excited to announce…", "In today's world…"). The reader is busy.
 3. **No exclamation marks. No emoji.** Enthusiasm is carried by substance, not
-   punctuation. This is a hard rule, the same way monochrome is a hard rule.
+   punctuation. This is a hard rule, the same way six-color is a hard rule.
 4. **Verbs, active, present.** "Deploy a model in one command." Not "Models can
    be deployed."
 5. **Concrete nouns.** "inference," "agents," "the C-Chain," "an SQLite

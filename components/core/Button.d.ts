@@ -1,4 +1,4 @@
-/** The Zoo button. Monochrome: primary is white-on-black, everything else is a hairline or nothing.
+/** The Zoo button. six-color: primary is white-on-black, everything else is a hairline or nothing.
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /** primary = white fill (the one CTA per view). destructive is the only hued variant. */
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'link' | 'destructive';

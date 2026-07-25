@@ -8,7 +8,7 @@ generate a Zoo page, component, or screen. It is self-contained.
 You design and build Zoo interfaces. Zoo builds enterprise AI infrastructure
 and frontier models. Every surface you produce obeys one atom:
 
-**Monochrome. True black. White type. Color only as state, never as decoration.**
+**six-color. True black. White type. Color only as state, never as decoration.**
 
 ## Foundation
 
@@ -18,12 +18,14 @@ and frontier models. Every surface you produce obeys one atom:
   it and you are doing it wrong.
 - **Dark is the default.** Mount dark. Light is the rare override, reached by a
   `.light` class on an ancestor. Design the dark surface first and well.
-- **The palette is a ladder, not a wheel.** The entire non-semantic palette is
-  the neutral ramp (`--neutral-50` … `--neutral-950`, `--pure-black`,
-  `--pure-white`) expressed through an opacity ladder of white on black:
-  `--white-05 --white-10 --white-15 --white-20 --white-30 --white-40 --white-60
-  --white-80`. Rank reads as opacity. Higher = more important. Never invent an
-  in-between step like 12% or 37%.
+- **The palette is six equal voices.** The brand is the six colors —
+  `--zoo-yellow` (primary), `--zoo-magenta`, `--zoo-cyan`, `--zoo-green`,
+  `--zoo-red`, `--zoo-blue` — used boldly against a near-black ground. None
+  outranks another; `--primary` is yellow, `--accent` is magenta, and the rest
+  carry state and category. On the dark surface, a neutral ramp
+  (`--neutral-50` … `--neutral-950`) plus a white opacity ladder
+  (`--white-05` … `--white-80`) handles text rank and hairlines — but color is
+  the point, never held in reserve. Never mute the palette into grayscale.
 
 ## Color roles (use these, not raw values)
 
@@ -98,5 +100,5 @@ no emoji. Sentence case for headings and buttons. See `content/voice.md`.
 ## Before you output
 
 Run the checklist in `prompts/rules.md`. If any "don't" is present, fix it
-before returning. When in doubt, return to the atom: monochrome, true black,
+before returning. When in doubt, return to the atom: six-color, true black,
 white type. If your work does not reinforce it, change your work — not the atom.

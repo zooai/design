@@ -1,7 +1,7 @@
 {
   "name": "@zooai/design",
   "version": "0.1.0",
-  "description": "Zoo Design System — monochrome, dark-default tokens + components + brand assets, the single source of truth for every Zoo surface.",
+  "description": "Zoo Design System — six-color, dark-default tokens + components + brand assets, the single source of truth for every Zoo surface.",
   "license": "MIT",
   "repository": { "type": "git", "url": "https://github.com/zooai/design.git" },
   "homepage": "https://zoo.ngo",
@@ -16,5 +16,5 @@
     "./assets/*": "./assets/*"
   },
   "files": ["styles.css", "tokens", "components", "prompts", "content", "docs", "assets", "guidelines", "ui_kits"],
-  "keywords": ["zoo", "design-system", "design-tokens", "brand", "monochrome"]
+  "keywords": ["zoo", "design-system", "design-tokens", "brand", "six-color"]
 }
