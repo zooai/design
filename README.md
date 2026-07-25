@@ -54,4 +54,4 @@ Tokens track `zoo.ngo` (`app/globals.css`, `tailwind.config.ts`, `DESIGN.md`) an
 
 ## License
 
-MIT. Brand marks (the Zoo logo, partner and provider logos) are the property of their respective owners and are provided for identification.
+BSD-3-Clause. Brand marks (the Zoo logo, partner and provider logos) are the property of their respective owners and are provided for identification.
