@@ -2,6 +2,8 @@
 
 # Zoo Design System
 
+[![Open in Hanzo](https://hanzo.app/badges/open-in-hanzo.svg)](https://hanzo.app/dev/open?repo=github.com/zooai/design&ref=main&action=open) [![Edit with Hanzo](https://hanzo.app/badges/edit-with-hanzo.svg)](https://hanzo.app/dev/open?repo=github.com/zooai/design&ref=main&action=edit)
+
 **six-color. Dark by default. One hue rendered through an opacity ladder.**
 
 The single source of truth for how every Zoo surface looks — tokens, components, brand assets, and the guidelines that hold them together.
